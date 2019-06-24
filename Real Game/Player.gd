@@ -35,3 +35,5 @@ func _process(delta):
 		$AnimatedSprite.flip_v = velocity.y > 0
 
 #test xd
+
+#test 2 xd
