@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://art_house/house1.PNG" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 900.423, 163.289 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 1 )
