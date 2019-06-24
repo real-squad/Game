@@ -33,7 +33,4 @@ func _process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = "up"
 		$AnimatedSprite.flip_v = velocity.y > 0
-
-#test xd
-
-#test 2 xd
+		
