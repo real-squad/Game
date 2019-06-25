@@ -17,12 +17,11 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 28.1311
-height = 3.18294
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41.3089, 95.1075 )
 
 [node name="Player" type="Area2D"]
-position = Vector2( 802.081, 135.727 )
+position = Vector2( 467.338, 264.026 )
 scale = Vector2( 0.8, 0.6 )
 script = ExtResource( 1 )
 __meta__ = {

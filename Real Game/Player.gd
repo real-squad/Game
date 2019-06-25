@@ -1,23 +1,18 @@
 extends Area2D
-	
+#walking movement speed player
 export var speed = 400
 
-var screen_size
+var screen_size #naar mainworld.gd later???
 
-func _ready():
-	screen_size = get_viewport_rect().size
+func _ready(): #naar mainworld.gd later???
+	screen_size = get_viewport_rect().size #naar mainworld.gd later???
 	
-func _input(event):
-	
-	if event is InputEventKey:
-		#sprint command
-		if event.scancode == KEY_SHIFT: #key to sprint
-			speed = 800 #sprinting movement speed
-		else:
-			speed = 400 #normal movement speed
-		
-		
 func _process(delta):
+	#sprint command
+	if Input.is_action_pressed("ui_page_up"): #key to sprint
+		speed = 800 #sprinting movement speed
+	else:
+		speed = 400 #walking movement speed
 	#2-element structure that can be used to represent positions in 2d space or any other pair of numeric values.
 	var velocity = Vector2()
 	
