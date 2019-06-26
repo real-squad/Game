@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Real Game"
-run/main_scene="res://Player.tscn"
+run/main_scene="res://Game.tscn"
 
 [input]
 
