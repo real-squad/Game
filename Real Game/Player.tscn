@@ -1,26 +1,30 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://art_player/Character_1.png" type="Texture" id=2]
+[ext_resource path="res://art_player/C1_idle.png" type="Texture" id=2]
+[ext_resource path="res://art_player/C1_movement_down_1.png" type="Texture" id=3]
+[ext_resource path="res://art_player/C1_movement_down_0.png" type="Texture" id=4]
+[ext_resource path="res://art_player/C1_movement_down_2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "up",
+"name": "right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "right",
+"name": "up",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 41.3089, 95.1075 )
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 31.2516
+height = 97.4655
 
 [node name="Player" type="Area2D"]
-position = Vector2( 467.338, 264.026 )
+position = Vector2( 272.317, 140.933 )
 scale = Vector2( 0.8, 0.6 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -33,5 +37,6 @@ frames = SubResource( 1 )
 animation = "up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 35 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
