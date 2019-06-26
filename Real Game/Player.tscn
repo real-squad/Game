@@ -1,12 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://art_player/Character 1/movement/right/C1_movement_right_0.png" type="Texture" id=2]
 [ext_resource path="res://art_player/Character 1/movement/right/C1_movement_right_2.png" type="Texture" id=3]
 [ext_resource path="res://art_player/Character 1/movement/right/C1_movement_right_1.png" type="Texture" id=4]
-[ext_resource path="res://art_player/Character 1/movement/down/C1_movement_down_0.png" type="Texture" id=5]
-[ext_resource path="res://art_player/Character 1/movement/down/C1_movement_down_2.png" type="Texture" id=6]
-[ext_resource path="res://art_player/Character 1/movement/down/C1_movement_down_1.png" type="Texture" id=7]
+[ext_resource path="res://art_player/Character 1/movement/up/c1_movement_up_0.png" type="Texture" id=5]
+[ext_resource path="res://art_player/Character 1/movement/up/c1_movement_up_1.png" type="Texture" id=6]
+[ext_resource path="res://art_player/Character 1/movement/up/c1_movement_up_2.png" type="Texture" id=7]
+[ext_resource path="res://art_player/Character 1/idle/C1_idle_down.png" type="Texture" id=8]
+[ext_resource path="res://art_player/Character 1/movement/down/C1_movement_down_0.png" type="Texture" id=9]
+[ext_resource path="res://art_player/Character 1/movement/down/C1_movement_down_2.png" type="Texture" id=10]
+[ext_resource path="res://art_player/Character 1/movement/down/C1_movement_down_1.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -18,6 +22,16 @@ animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "down",
 "speed": 5.0
 } ]
 
@@ -36,7 +50,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
-animation = "up"
+animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 35 )
